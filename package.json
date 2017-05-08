@@ -15,8 +15,12 @@
     "build-and-run": "npm run date-log \"just build-and-run\" && npm run build:babel && node lib/index.js",
 
     "prepublish": "npm run build",
-    "DISABLED_prepublish": "npm run date-log \"PREPUBLISH called\""
+    
+    "preinstall": "npm run date-log \"PREINSTALL called\"",
+    "install": "npm run date-log \"INSTALL called\" && npm run build:label && touch fooooooooo",
 
+
+    "SENTINEL": "echo nothing"
   },
   "repository": {
     "type": "git",
