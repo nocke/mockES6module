@@ -6,32 +6,27 @@
   "scripts": {
     "clean": "rm -rf lib/*",
     "clean-log": "rm ./buildlog.txt",
-
     "date": "echo \"called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\"",
     "date-log": "echo \"called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\" >> buildlog.txt",
-
     "build:babel": "babel src -d lib -s",
     "build": "npm run date \"BUILD called\" && npm run date-log \"BUILD called\" && npm run build:babel",
     "build-and-run": "npm run date-log \"just build-and-run\" && npm run build:babel && node lib/index.js",
-
     "prepublish": "npm run build",
-
     "preinstall": "ls -lisa . && echo BEFORE",
     "install": "babel src -d lib -s",
-
-
     "SENTINEL": "echo nothing"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/nocke/mockES6module.git"
   },
-  "author": "frank",
-  "keywords": [],
   "author": "",
+  "keywords": [],
   "license": "ISC",
   "devDependencies": {
+    "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
     "babel-preset-es2015": "^6.24.1"
   }
 }
