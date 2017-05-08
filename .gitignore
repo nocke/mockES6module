@@ -1,71 +1,10 @@
-### .gitignore ##############
 
-# temp and backups
-*~
-*.log
-*.bak
-/buildlog.txt
-tmp
 
-# folders
-cache/
-log/
-PREP/
-# [Bb]uild/
+# Dependency directory
+# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git
+
+node_modules
 lib/
+buildlog.txt
 
-# all hidden files/folders (except .gitignore, .htaccess,... )
-# there might be .htaccess on multiple levels...
-.*
-!.gitignore
-# oh, the irony!
-!.npmignore
-!.htaccess
-!.htpasswd
-!.editorconfig
-!.babelrc
 
-# versioning
-.svn
-
-######################
-#  security
-
-######################
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-.picasa.ini
-Icon?
-ehthumbs.db
-Thumbs.db
-Desktop.ini
-
-#########################
-# Eclipse
-.settings
-.cache
-.project
-
-##########################
-# npm
-node_modules/**/*
-bower_components/**/*
-
-# IDE subfolders ############
-nbproject
-
-# particular css files (unless desired)
-
-#########################
-# wp subfolders (might !negate own plugin again, if it happens)
-# top-level and certain subfolders, but not  /wp-config[-sample]
-
-#########################
-# output folders (generated stuff)
-/public/**/*.css
-/public/**/*.css.map
-/public/**/*.js.map
