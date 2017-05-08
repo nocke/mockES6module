@@ -1,0 +1,16 @@
+{
+  "name": "mockES6module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "date" : "echo \"build called on $(date \"+%Y-%m-%d  %H:%M:%S\")\"",
+    "date-log" : "echo \"build called on $(date \"+%Y-%m-%d  %H:%M:%S\")\" >> buildlog.txt",
+
+    "build:babel": "babel src -d lib -s",
+    "build": "npm run date && npm run date-log && npm run build:babel"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
