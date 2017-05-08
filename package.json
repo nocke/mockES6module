@@ -16,8 +16,8 @@
 
     "prepublish": "npm run build",
     
-    "preinstall": "npm run build:babel && ls -lisa .",
-    "install": "echo \"INSTALL called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\"",
+    "preinstall": "ls -lisa . && echo BEFORE",
+    "install": "babel src -d lib -s",
 
 
     "SENTINEL": "echo nothing"
