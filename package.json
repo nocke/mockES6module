@@ -1,12 +1,12 @@
 {
   "name": "mockES6module",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf lib/*",
-    "date": "echo \"build called on $(date \"+%Y-%m-%d  %H:%M:%S\")\"",
-    "date-log": "echo \"build called on $(date \"+%Y-%m-%d  %H:%M:%S\")\" >> buildlog.txt",
+    "date": "echo \"build called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\"",
+    "date-log": "echo \"build called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\" >> buildlog.txt",
     "build:babel": "babel src -d lib -s",
     "build": "npm run date && npm run date-log && npm run build:babel",
     "build-and-run": "npm run build:babel && node lib/index.js"

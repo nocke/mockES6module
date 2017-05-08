@@ -4,6 +4,7 @@
 *~
 *.log
 *.bak
+/buildlog.txt
 tmp
 
 # folders
