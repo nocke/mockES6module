@@ -11,10 +11,12 @@
     "date-log": "echo \"called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\" >> buildlog.txt",
 
     "build:babel": "babel src -d lib -s",
-    "build": "npm run date-log \"BUILD called\" && npm run build:babel",
+    "build": "npm run date \"BUILD called\" && npm run date-log \"BUILD called\" && npm run build:babel",
     "build-and-run": "npm run date-log \"just build-and-run\" && npm run build:babel && node lib/index.js",
 
-    "prepublish": "npm run date-log \"PREPUBLISH called\""
+    "prepublish": "npm run build",
+    "DISABLED_prepublish": "npm run date-log \"PREPUBLISH called\""
+    
   },
   "repository": {
     "type": "git",
