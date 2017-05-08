@@ -22,9 +22,6 @@
     "type": "git",
     "url": "https://github.com/nocke/mockES6module.git"
   },
-  "files": [
-    "lib"
-  ],
   "author": "frank",
   "keywords": [],
   "author": "",
