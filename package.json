@@ -1,6 +1,6 @@
 {
   "name": "mockES6module",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -16,8 +16,8 @@
 
     "prepublish": "npm run build",
     
-    "preinstall": "npm run date-log \"PREINSTALL called\"",
-    "install": "npm run date-log \"INSTALL called\" && npm run build:label && touch fooooooooo",
+    "preinstall": "npm run build:babel && ls -lisa .",
+    "install": "echo \"INSTALL called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\"",
 
 
     "SENTINEL": "echo nothing"
