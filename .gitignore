@@ -10,9 +10,8 @@ tmp
 cache/
 log/
 PREP/
-[Bb]uild/
-#  app/*.js
-#  app/report*.html
+# [Bb]uild/
+lib/
 
 # all hidden files/folders (except .gitignore, .htaccess,... )
 # there might be .htaccess on multiple levels...
