@@ -18,6 +18,8 @@ lib/
 # there might be .htaccess on multiple levels...
 .*
 !.gitignore
+# oh, the irony!
+!.npmignore
 !.htaccess
 !.htpasswd
 !.editorconfig
