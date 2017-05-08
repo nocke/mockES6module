@@ -5,11 +5,16 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf lib/*",
-    "date": "echo \"build called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\"",
-    "date-log": "echo \"build called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\" >> buildlog.txt",
+    "clean-log": "rm ./buildlog.txt",
+
+    "date": "echo \"called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\"",
+    "date-log": "echo \"called on $(date \"+%Y-%m-%d  %H:%M:%S\") – Version $npm_package_version\" >> buildlog.txt",
+
     "build:babel": "babel src -d lib -s",
-    "build": "npm run date && npm run date-log && npm run build:babel",
-    "build-and-run": "npm run build:babel && node lib/index.js"
+    "build": "npm run date-log \"BUILD called\" && npm run build:babel",
+    "build-and-run": "npm run date-log \"just build-and-run\" && npm run build:babel && node lib/index.js",
+
+    "prepublish": "npm run date-log \"PREPUBLISH called\""
   },
   "keywords": [],
   "author": "",
