@@ -1,7 +1,7 @@
 
 class Dogs {
     constructor(state) {
-        this.dogs = ['hasso, bello'];
+        this.dogs = ['Hasso, Bello'];
     }
 
 	getDogs() {
